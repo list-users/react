@@ -1,18 +1,12 @@
-import { createBrowserRouter, Link} from 'react-router-dom';
+import { createBrowserRouter, Link } from 'react-router-dom';
 import App from './App';
 import Todo from './Container/Todo';
-// import Login from './Container/Auth/Login';
-import TextInput from './Component/TextInput';
+import Login from './Container/Auth/Login';
 
 const router = createBrowserRouter([
-    {path: "/",
-        element: (
-            // 
-            <div>
-                <TextInput/>
-                <h1>login </h1>
-            </div>
-        ),
+    {
+        path: "/",
+        element: (<Login />)
     },
     {
         path: 'about',
@@ -23,11 +17,9 @@ const router = createBrowserRouter([
             </div>
         )
     },
-     {
+    {
         path: 'todoapp',
-        element: (
-            <Todo/>
-        )
+        element: (<Todo/>)
     },
 ])
 
